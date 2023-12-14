@@ -6,6 +6,8 @@ app: ## appコンテナを起動
 	docker compose up app
 up: ## webコンテナとappコンテナを起動
 	docker compose up
+reload: ## 設定ファイルの再読み込み(webコンテナのリビルド)
+	docker compose up web --build
 rebuild: ## webコンテナとappコンテナをリビルドして起動
 	docker compose up --build
 down: ## webコンテナとappコンテナを停止
