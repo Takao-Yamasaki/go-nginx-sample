@@ -13,8 +13,8 @@ rebuild: ## webコンテナとappコンテナをリビルドして起動
 down: ## webコンテナとappコンテナを停止
 	docker compose down
 run: ## `go run`して表示確認
-	docker-compose exec -it app go run main.go
+	docker compose exec -it app go run main.go
 exec: ## appコンテナに接続
-	docker-compose exec -it app sh
+	docker compose exec -it app sh
 help: ## ヘルプを表示
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
