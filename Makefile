@@ -12,6 +12,8 @@ rebuild: ## webコンテナとappコンテナをリビルドして起動
 	docker compose up --build
 down: ## webコンテナとappコンテナを停止
 	docker compose down
+run: ## `go run`して表示確認
+	docker-compose exec -it app go run main.go
 exec: ## appコンテナに接続
 	docker-compose exec -it app sh
 help: ## ヘルプを表示

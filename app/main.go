@@ -11,8 +11,8 @@ func main() {
 	engine.LoadHTMLGlob("templates/*")
 	engine.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{
-			"message": "Hello Gin!!",
+			"message": "Demon Slayer!!",
 		})
 	})
-	engine.Run(":8080")
+	engine.Run(":3006")
 }

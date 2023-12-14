@@ -3,15 +3,15 @@
 
 ## 課題
 - webコンテナ(Nginx)からappコンテナ(Go)に転送されるように、`default.conf`を設定してください
-
+- 成功すれば、`Demon Slayer!!`と表示されます
 ## エンドポイント
 - Nginx
 ```
-http://localhost:80
+http://localhost:83
 ```
 - Go
 ```
-http://localhost:8080
+http://localhost:3006
 ```
 
 ## 起動方法
