@@ -8,9 +8,9 @@ up: ## webコンテナとappコンテナを起動
 	docker compose up
 rebuild: ## webコンテナとappコンテナをリビルドして起動
 	docker compose up --build
+down: ## webコンテナとappコンテナを停止
+	docker compose down
 exec: ## appコンテナに接続
 	docker-compose exec -it app sh
-run: ## go runする(確認用)
-	docker-compose exec -it app go run main.go
-help: ## ヘルプを表示する
+help: ## ヘルプを表示
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
