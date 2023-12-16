@@ -1,8 +1,8 @@
 # go-nginx-sample
-- Nginxの設定ファイルの書き方を学ぶためのサンプルです
+- nginxの設定ファイルの書き方を学ぶためのサンプルです
 
 ## 課題
-- webコンテナ(Nginx)からappコンテナ(Go)に転送されるように、`default.conf`を設定してください
+- webコンテナ(nginx)からappコンテナ(Go)に転送されるように、`default.conf`を設定してください
 - 成功すれば、`Demon Slayer!!`と表示されます
 ## エンドポイント
 - Nginx
@@ -15,7 +15,7 @@ http://localhost:3006
 ```
 
 ## 課題の実施手順
-1. webコンテナ(Nginx)とappコンテナ(Go)を起動
+1. webコンテナ(nginx)とappコンテナ(Go)を起動
 ```
 make up
 ```
@@ -40,3 +40,7 @@ make reload
 ```
 make help
 ```
+
+## MEMO
+- `docker network`を確認して、IPアドレスを指定してもいい
+- localなので、`Dockerfile`で設定ファイルを`COPY`せずとも、`compose.yaml`で`volume`を使って、設定ファイルを`reload`すればいい

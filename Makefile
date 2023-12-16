@@ -20,10 +20,10 @@ test: ## 設定ファイルの構文チェック(nginxコンテナが起動し�
 	docker compose exec -it web nginx -t
 copy: ##設定ファイルをコンテナにコピー(nginxコンテナが起動した状態でないと使えない)
 	docker cp ./web/default.conf go-nginx-sample-web-1:/etc/nginx/conf.d/default.conf
-conf-reload: ## 設定ファイルの読み込み(nginxコンテナが起動した状態でないと使えない)
+reload: ## 設定ファイルの読み込み(nginxコンテナが起動した状態でないと使えない)
 	docker compose exec -it web nginx -s reload
-reload: ##設定ファイルをコンテナにコピーして再読み込み
-	make copy && make conf-reload
+cpreload: ##設定ファイルをコンテナにコピーして再読み込み
+	make copy && make reload
 network: ## ネットワークの一覧を表示
 	docker network ls
 inspect: ## ネットワークの詳細を表示
