@@ -5,9 +5,9 @@ services:
       context: .
       dockerfile: ./web/Dockerfile
     ports:
-      - "80:80"
-    depends_on:
-      - app
+      - "83:83"
+    # depends_on:
+    #   - app
   app:
     build:
       context: .
@@ -16,5 +16,5 @@ services:
     volumes:
       - ./app:/go/src/app
     ports:
-      - "8080:8080"
+      - "3006:3006"
     working_dir: /go/src/app
