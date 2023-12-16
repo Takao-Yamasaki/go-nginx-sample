@@ -6,8 +6,8 @@ services:
       dockerfile: ./web/Dockerfile
     ports:
       - "83:83"
-    # depends_on:
-    #   - app
+    depends_on:
+      - app
   app:
     build:
       context: .
