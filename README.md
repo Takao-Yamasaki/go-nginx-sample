@@ -42,5 +42,6 @@ make help
 ```
 
 ## MEMO
-- `docker network`を確認して、IPアドレスを指定してもいい
+- Goのサーバーは、今回触らないので、`Dockerfile`でビルドしておいて、サーバーを起動状態にしておけばいい
+- `docker network`を確認して、使用しているIPアドレスを指定してもいい
 - localなので、`Dockerfile`で設定ファイルを`COPY`せずとも、`compose.yaml`で`volume`を使って、設定ファイルを`reload`すればいい
